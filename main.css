@@ -8,6 +8,15 @@
     --red: #C30A0A;
     --bg: #F4F0F1;
     --black: #070E46;
+    --back: #EDF2F0;
+    --neu-1: #f6f3f3;
+    --neu-2: #d4c9c9;
+
+    --white: #f9f9f9;
+    --gray: #a0a5a8;
+    --black: #181818;
+
+    --purple: #032ba5;
 
     --ladoX: 60px;
     --ladoY: 60px;
@@ -15,6 +24,8 @@
 
     --font-title: "Bebas Neue", sans-serif;
     --font-content: "Montserrat", sans-serif;
+
+    
 }
 
 /* ----------------------------------------------------- */
@@ -30,6 +41,8 @@ body {
     margin: 0 auto;
     margin-bottom: 2rem;
     cursor: url('images/cursor.svg'), auto; 
+    background-color: var(--neu-1);
+	color: var(--gray);
 }
 
 
@@ -51,18 +64,23 @@ button {
     margin-left: auto;
     font-family: var(--font-title);
     font-size: 1rem;
-    background-color: var(--bg); 
+    background-color: var(--red); 
     border: none;              
-    color: var(--red);             
+    color: var(--white);             
     padding: 1rem 4rem;                    
     border-radius: 0.5rem;       
-    transition: background-color 0.3s;
+	box-shadow:
+		10px 10px 10px var(--neu-2),
+		-10px -10px 10px var(--white);
 }
 
 button:hover {
-    background-color: var(--red); 
-    color: white;
+    background-color: var(--white); 
+    color: var(--red);
     cursor: url('images/cursor.svg'), auto;
+    box-shadow: 0 0 0 transparent, 0 0 0 transparent, inset -10px -10px 10px 0px var(--white), inset 10px 10px 10px 0px #aeaec0;
+  transform: scale(.9);
+    
 }
 
 .loup{
@@ -79,6 +97,8 @@ header {
     padding: 1rem; 
     width: 100%;
     margin: 1rem 0;
+
+    
 }
 
 header button {
@@ -87,18 +107,6 @@ header button {
         margin-right: 5%;
       }
       
-      .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #f9f9f9;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        padding: 12px 16px;
-        z-index: 1;
-      }
-      
-      .dropdown:hover .dropdown-content {
-        display: block; }
 
 
 nav {
@@ -145,17 +153,70 @@ main button {
     margin-top: 2rem;
 }
 
-.portada {
-    border:thin solid black;
-        width: 500% !important;
-        height: 200px; /* Altura de la portada */
-        background-size: cover;
-        
-    
-}
 
 /* ------------------trabajos----------------------------------- */
 
+.cover {
+    background-image: url('images/Coinhabit/coinhabit.png'); /* Reemplaza con la ruta de tu imagen de portada */
+    background-size: cover;
+    background-position: center;
+    /* filter: brightness(90%); */
+    /* margin-bottom: 10rem; */
+    display: flex;
+    align-items: left;
+    /* justify-content: center; */
+    text-align: left;
+    height: 300px;
+    width: 944px;
+    transform: scale(1);
+}
+
+.cover_tags {
+    position: absolute;
+    /* top: 0px;  */
+    justify-items: left;
+    margin-left: 2%;
+    
+}
+
+.cover_tag {
+    background-color: var(--bg);
+    /* border: 1.5px solid var(--red); */
+    border-radius: 1rem;
+    color: var(--red);
+    font-family: var(--font-title);
+    padding: 5px 30px;
+
+    /* margin-right: 5px; */
+    font-size: 12px;
+    z-index: 4;
+    position: relative;
+
+}
+
+.context {
+    display: flex;
+    margin: 2rem 1.5rem; 
+    color: var(--black);
+    justify-content: left;
+    align-items: left;
+    width: 95%;; 
+    max-width:100%;
+    /* padding: 2rem; */
+    border-radius: 2rem;
+    gap: 3rem;
+    text-align: left;
+    /* border: thin solid black; */
+    /* /* position: relative;
+    animation: mymove 5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease; */
+}
+
+/* @keyframes mymove {
+    from {left: -4000px;}
+    to {left: 0px;}
+  } */ */
 
 
 
@@ -273,7 +334,10 @@ article {
     padding: 4rem;
     border-radius: 2rem;
     gap: 3rem;
-    box-shadow: 0 25px 50px 10px rgb(0 0 0 / 0.25);
+    background-color: var(--neu-1);
+	box-shadow:
+		10px 10px 10px var(--neu-2),
+		-10px -10px 10px white;
 }
 
 
@@ -357,7 +421,10 @@ article {
     padding: 4rem;
     border-radius: 2rem;
     gap: 3rem;
-    box-shadow: 0 25px 50px 10px rgb(0 0 0 / 0.25);
+    background-color: var(--neu-1);
+	box-shadow:
+		10px 10px 10px var(--neu-2),
+		-10px -10px 10px white;
 }
 
 
@@ -521,7 +588,8 @@ footer {
 .RRSS button:hover {
     background-color: var(--red); 
     color: white;
-    cursor: url('images/cursor6.svg'), auto;
+    cursor: url('images/cursor.svg'), auto;
+
 }
 
 
