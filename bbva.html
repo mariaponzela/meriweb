@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Meriweb</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="main.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <a href="index.html">UX/UI Projects</a>
+                <a href="Side.html">Side Projects</a>
+                <a href="Gallery.html">My Gallery</a>
+            </nav>
+            <button onclick="window.location='Chat.html'">Let's chat</button>
+        </header>
+
+        <div class="cover_bbva">
+            <h1 style="color: black; padding-left:1rem;">BBVA</h1>
+            <div class="cover_tags">
+                <!-- <span class="cover_tag">UX/UI designer</span>
+                <span class="cover_tag">graphic</span> -->
+            </div>
+        </div>
+
+        <div class="debrief">          
+        </div>
+        <section class="context">
+
+            <div>
+                <p><em>What have I done during this last year?</em></p>
+                <h1>Grafic, service, strategic, future designer</h1>
+                <p>The journey has been intense and exciting, with many opportunities, with responsibility projects and with people from many teams such as business, data, marketing, development, T&C, etc. But there are 4 projects that stand out this year at BBVA.
+
+                    <br><br><em>*Due to confidentiality issues, to learn more about these projects, let me invite you to a coffee and I'll tell you.</em></p>
+            </div>
+        </section>
+
+        <img src="images/BBVA/no move.png" style="max-width: 944px; height: 500px;">
+        <!-- <video class="video_coinhabit" autoplay muted loop>
+            <source src="images/BBVA/cover.mp4">
+        </video> -->
+
+
+        <section class="context1">
+            <div>
+                <p><em>My work process</em></p>
+                <h1>We are always thinking about the user</h1>
+                <p>I have had the opportunity to work on qualitative and quantitative research alongside the RCP research team and The Cocktail analysis, as well as in the review phases with A/B testing for users and redesign of flows for different geographies.</p>
+            </div>
+            <video class="video_process" autoplay muted loop>
+                <source src="images/BBVA/process.mp4">
+            </video>
+        </section>
+
+         <div class="renders">
+            <img src="images/BBVA/mayrit.png" alt="Imagen 1" class="ejemplos">
+            <img src="images/BBVA/OM.jpg" alt="Imagen 2"class="ejemplos">
+            <img src="images/BBVA/exposicion.png" alt="Imagen 3"class="ejemplos">
+            <img src="images/BBVA/Posicionamiento_Brainstorming.jpg" alt="Imagen 4"class="ejemplos">
+        </div> 
+
+        <section class="context">
+
+            <div>
+                <p><em>I could also be...</em></p>
+                <h1>Connected to the core of the bank</h1>
+                <p>It was considered important to help them manage their money easily and equitably, taking into account each person's capacity. Simplifying the effort, educating financially and creating a brand that helps create community.</p>
+            </div>
+        </section>
+       
+        <div class="carrusel">
+            <div class="slides" id="slides"></div>
+            <div class="arrow arrow-left" id="prevButton">◀</div>
+            <div class="arrow arrow-right" id="nextButton">▶</div>
+        </div>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+<script>
+    const url = 'images/Coinhabit/coin.pdf'; // Reemplaza con la ruta a tu PDF local
+    const slidesContainer = document.getElementById('slides');
+    const prevButton = document.getElementById('prevButton');
+    const nextButton = document.getElementById('nextButton');
+    let pdfDoc = null;
+    let totalPages = 0;
+    let currentPage = 0;
+
+    // Cargar el documento PDF
+    pdfjsLib.getDocument(url).promise.then(pdf => {
+        pdfDoc = pdf;
+        totalPages = pdf.numPages;
+        renderAllPages(); // Renderizar todas las páginas
+    });
+
+    // Renderizar todas las páginas en contenedores separados
+    function renderAllPages() {
+        for (let pageNum = 0; pageNum < totalPages; pageNum++) {
+            renderPage(pageNum);
+        }
+    }
+
+    // Renderizar una página en un canvas
+    function renderPage(pageNum) {
+        pdfDoc.getPage(pageNum + 1).then(page => {
+            const scale = 1.5; // Ajusta el tamaño de la página
+            const viewport = page.getViewport({ scale });
+            const canvas = document.createElement('canvas');
+            const context = canvas.getContext('2d');
+            canvas.height = viewport.height;
+            canvas.width = viewport.width;
+
+            // Crear un contenedor para la página
+            const slide = document.createElement('div');
+            slide.className = 'slide';
+            slide.appendChild(canvas);
+            slidesContainer.appendChild(slide);
+
+            const renderContext = {
+                canvasContext: context,
+                viewport: viewport
+            };
+            page.render(renderContext);
+        });
+    }
+
+    // Función para actualizar la visualización de la página
+    function updateSlides() {
+        slidesContainer.style.transform = `translateX(-${currentPage * 944}px)`; // Cambiar la posición según el nuevo ancho
+    }
+
+    // Manejar el clic en el botón anterior
+    prevButton.addEventListener('click', () => {
+        if (currentPage > 0) {
+            currentPage--;
+            updateSlides();
+        }
+    });
+
+    // Manejar el clic en el botón siguiente
+    nextButton.addEventListener('click', () => {
+        if (currentPage < totalPages - 1) {
+            currentPage++;
+            updateSlides();
+        }
+    });
+</script>
+       
+
+
+        <img class="loup" src="images/Footer.gif"></img>
+        <footer>
+            <h1>You can also find me in...</br></h1>
+            <div class="RRSS">
+                <button><i class="fab fa-linkedin-in"></i></button>
+                <button><i class="fab fa-behance"></i></button>
+                <button><i class="fab fa-instagram"></i></button>
+                <button><i class="fab fa-github"></i></button>
+            </div>
+        </footer>
+        
+    </body>
