@@ -164,7 +164,18 @@ main button {
     height: 400px;
     width: 944px;
     transform: scale(1);
-    /* border: thin solid black; */
+}
+
+.cover_bbva {
+    background-image: url('images/BBVA/vela.jpg'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: left;
+    text-align: left;
+    height: 400px;
+    width: 944px;
+    transform: scale(1);
 }
 
 .video_coinhabit {
@@ -172,6 +183,10 @@ main button {
     max-width:944px;
 }
 
+.video_process {
+    width: 450px; 
+    max-width:450px;
+}
 .context {
     display: flex;
     margin: 4rem 1.5rem; 
@@ -184,7 +199,7 @@ main button {
     border-radius: 2rem;
     gap: 3rem;
     text-align: center;
-    /* border: thin solid black; */ */
+    /* border: thin solid black; */ 
     /* /* position: relative;
     animation: mymove 5s;
     animation-fill-mode: forwards;
