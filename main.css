@@ -56,17 +56,18 @@ p {
     font-family: var(--font-content);
     margin: 0;
     margin-bottom: 2rem;
+    color: var(--font-title);
 }
 
 button {
     margin-left: auto;
     font-family: var(--font-title);
     font-size: 1rem;
-    background-color: var(--red); 
+    background-color: var(--neu-1); 
     border: none;              
-    color: var(--white);             
+    color: var(--gray);             
     padding: 1rem 4rem;                    
-    border-radius: 0.5rem;       
+    border-radius: 1rem;       
 	box-shadow:
 		10px 10px 10px var(--neu-2),
 		-10px -10px 10px var(--white);
@@ -79,6 +80,30 @@ button:hover {
     box-shadow: 0 0 0 transparent, 0 0 0 transparent, inset -10px -10px 10px 0px var(--white), inset 10px 10px 10px 0px #aeaec0;
   transform: scale(.9);
     
+}
+
+.button_important{
+    padding: 1rem 4rem !important; 
+    color: var(--red);
+    background: none;
+    border-color: var(--white);
+    border-style: solid;
+    border-width: 0.2rem;
+    border-radius: 1rem;
+    padding: 16px 24px 16px 28px;
+    transform: translate(0px, 0px) rotate(0deg);
+    transition: 0.2s;
+    box-shadow: -4px -2px 16px 0px var(--neu-1), 4px 2px 16px 0px rgba(102, 65, 65, 0.48);
+}
+
+.button_important:hover {
+    color: #fff;
+    border-color: var(--red);
+    background: var(--red);
+    box-shadow: 4px 4px 6px 0 rgba(184, 118, 118, 0.5),
+    -4px -4px 6px 0 rgba(116, 125, 136, .5), 
+inset -4px -4px 6px 0 rgba(100, 76, 76, 0.2),
+inset 4px 4px 6px 0 rgba(48, 2, 2, 0.4);
 }
 
 .loup{
@@ -164,7 +189,18 @@ main button {
     height: 400px;
     width: 944px;
     transform: scale(1);
-    /* border: thin solid black; */
+}
+
+.cover_bbva {
+    background-image: url('images/BBVA/vela.jpg'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: left;
+    text-align: left;
+    height: 400px;
+    width: 944px;
+    transform: scale(1);
 }
 
 .video_coinhabit {
@@ -172,6 +208,10 @@ main button {
     max-width:944px;
 }
 
+.video_process {
+    width: 450px; 
+    max-width:450px;
+}
 .context {
     display: flex;
     margin: 4rem 1.5rem; 
@@ -184,7 +224,7 @@ main button {
     border-radius: 2rem;
     gap: 3rem;
     text-align: center;
-    /* border: thin solid black; */ */
+    /* border: thin solid black; */ 
     /* /* position: relative;
     animation: mymove 5s;
     animation-fill-mode: forwards;
@@ -477,6 +517,7 @@ canvas {
 }
 
 
+
 /* ----------------------More proyects------------------------------- */ 
 
 .content {
@@ -580,7 +621,7 @@ textarea {
     margin-bottom: 2rem;
 }
 
-.card1 h1 {
+/* .card1 h1 {
     font-family: var(--font-title);
 }
 
@@ -598,9 +639,53 @@ textarea {
 .card:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
+} */
 
-
+.card_definition {
+    width: auto;
+    height: auto;
+    background-color: var(--neu-1);
+    text-align: center;
+    /* border: 10px solid #eee; */
+    border-radius: 2px;
+    /* box-shadow: inset 5px 5px 10px #bbb, inset -5px -5px 10px #fff; */
+    transition: 0.5s;
+  }
+  
+  .card_deinition:hover {
+    height: auto ;
+  }
+  
+  .icon1 {
+    width: 150px;
+    height: 60px;
+    color: var(--black);
+    font-size: 3rem;
+    background-color: var(--neu-1);
+    margin: 20px auto;
+    padding: 5px;
+    border-radius: 10%;
+    box-shadow: 8px 8px 10px #ddd, -8px -8px 10px #fff;
+  }
+  
+  .text {
+    color: var(--black);
+    background-color: var(--neu-1);
+    padding: 10px;
+    margin: 5px 20px;
+    border-radius: 8px;
+    box-shadow: 8px 8px 10px #ddd, -8px -8px 10px #fff;
+    transform: translateY(-80px) scale(0);
+    transition: all 0.5s;
+  }
+  
+  .card_definition:hover .text {
+    transform: translateY(0) scale(1)
+  }
+  
+  .text h3 {
+    text-shadow: 2px 2px 0px #fff;
+  }
 
 
 
