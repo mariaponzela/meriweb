@@ -36,8 +36,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 100%;
-    margin: 0 4rem;
+    max-width: 944px;
+    margin: 0 auto;
     margin-bottom: 2rem;
     cursor: url('images/cursor.svg'), auto; 
     background-color: var(--neu-1);
@@ -46,20 +46,6 @@ body {
 
 
 h1 {
-    font-family: var(--font-title);
-    color: var(--black);
-    font-size: 6rem;
-    font-weight: normal;
-}
-
-h2 {
-    font-family: var(--font-title);
-    color: var(--black);
-    font-size: 4rem;
-    font-weight: normal;
-}
-
-h3 {
     font-family: var(--font-title);
     color: var(--black);
     font-size: 3rem;
@@ -71,10 +57,9 @@ p {
     margin: 0;
     margin-bottom: 2rem;
     color: var(--font-title);
-    font-size: 1.5rem;
 }
 
- /* button {
+button {
     margin-left: auto;
     font-family: var(--font-title);
     font-size: 1rem;
@@ -95,25 +80,23 @@ button:hover {
     box-shadow: 0 0 0 transparent, 0 0 0 transparent, inset -10px -10px 10px 0px var(--white), inset 10px 10px 10px 0px #aeaec0;
   transform: scale(.9);
     
-}  */
+}
 
-button {
-    margin-left: auto;
+.button_important{
     padding: 1rem 4rem !important; 
     color: var(--red);
     background: none;
-    font-family: var(--font-title);
-    font-size: 1.5rem;
     border-color: var(--white);
     border-style: solid;
     border-width: 0.2rem;
-    border-radius: 1rem; 
+    border-radius: 1rem;
+    padding: 16px 24px 16px 28px;
     transform: translate(0px, 0px) rotate(0deg);
     transition: 0.2s;
     box-shadow: -4px -2px 16px 0px var(--neu-1), 4px 2px 16px 0px rgba(102, 65, 65, 0.48);
 }
 
-button:hover {
+.button_important:hover {
     color: #fff;
     border-color: var(--red);
     background: var(--red);
@@ -137,12 +120,14 @@ header {
     padding: 1rem; 
     width: 100%;
     margin: 1rem 0;
+
+    
 }
 
 header button {
         position: relative;
         display: inline-block;
-
+        margin-right: 5%;
       }
       
 
@@ -157,7 +142,7 @@ nav {
 
 nav a {
     font-family: var(--font-title);
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: var(--red); 
     text-decoration: none; 
     padding: 0 1rem;
@@ -168,7 +153,7 @@ nav a {
 a:hover:not(.active) { 
     color: black; 
     text-decoration: underline;
-    font-size: 1.7rem;
+    font-size: 1.2rem;
     cursor: url('images/cursor6.svg'), auto;
 }
  
@@ -184,7 +169,7 @@ main {
 }
 
 main img {
-    max-width: 1242px;
+    max-width: 20rem;
 }
 
 main button {
@@ -201,8 +186,8 @@ main button {
     display: flex;
     align-items: left;
     text-align: left;
-    height: 600px;
-    width: 1242px;
+    height: 400px;
+    width: 944px;
     transform: scale(1);
 }
 
@@ -213,28 +198,28 @@ main button {
     display: flex;
     align-items: left;
     text-align: left;
-    height: 800px;
-    width: 100%;
+    height: 400px;
+    width: 944px;
     transform: scale(1);
 }
 
 .video_coinhabit {
-    width: 100%; 
-    max-width:1242px;
+    width: 100%;; 
+    max-width:944px;
 }
 
-/* .video_process {
-    width: 1241px; 
+.video_process {
+    width: 450px; 
     max-width:450px;
-} */
+}
 .context {
     display: flex;
     margin: 4rem 1.5rem; 
     color: var(--black);
     justify-content: center;
     align-items: center;
-    width: 60%; 
-    max-width:1242px;
+    width: 95%; 
+    max-width:944px;
     /* padding: 2rem; */
     border-radius: 2rem;
     gap: 3rem;
@@ -246,6 +231,17 @@ main button {
     animation-timing-function: ease; */
 }
 
+.context1 {
+    display: flex;
+    text-align: left;
+    width: 100%; 
+    margin: 4rem;
+}
+
+/* @keyframes mymove {
+    from {left: -4000px;}
+    to {left: 0px;}
+  } */ 
 
 
   .renders {
@@ -258,7 +254,7 @@ main button {
   }  
 
 .ejemplos {
-    width: 640px;
+    width: 470px;
     height: 400px;
     object-fit:cover;
 }
@@ -274,8 +270,6 @@ main button {
   .carrusel {
     width: 944px; /* Ancho ajustado */
     height: 510px; /* Alto ajustado */
-    scale: 1.4;
-    margin: 6rem;
     overflow: hidden;
     position: relative;
     border: 2px solid #ccc;
@@ -511,20 +505,15 @@ canvas {
     color: var(--black);
     justify-content: center;
     align-items: center;
-    width: 60%;
+    width: 80%;; 
+    max-width:944px;
     padding: 4rem;
     border-radius: 2rem;
-    gap: 10rem;
-    background-color: var(--white);
-	/* box-shadow:
+    gap: 3rem;
+    background-color: var(--neu-1);
+	box-shadow:
 		10px 10px 10px var(--neu-2),
-		-10px -10px 10px white; */
-}
-
-video {
-    border-radius: 1rem;
-    /* min-height: 5rem; */
-    width: 80%;
+		-10px -10px 10px white;
 }
 
 
@@ -546,7 +535,10 @@ video {
     padding: 5rem 2rem;
 }
 
-
+video {
+    border-radius: 1rem;
+    min-height: 5rem;
+}
 
 /* ----------------------Chat------------------------------- */ 
 
@@ -613,7 +605,7 @@ textarea {
 }
 
 .process {
-    width: 60%;
+    width: 100%;
     filter: brightness(99%); 
     
 }
