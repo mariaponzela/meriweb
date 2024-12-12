@@ -513,8 +513,8 @@ canvas {
     height: auto;
     filter: brightness(100%);
     object-fit: cover;
-    width: 200px; 
-    height: 200px;
+    width: 250px; 
+    height: 250px;
     gap: 0;
     row-gap: 0;
 
@@ -800,355 +800,134 @@ footer {
 
 /* Media Queries */
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
  
-    h1{
-        font-size: 230%;
-        }
-    
-    /* ............................................. */
-    
-    nav a{
-        display: block;
-        width: 100%;
-        margin-left: 5%;
-        margin-right: 5%;
-        gap: 10%;
-    }
-
-
-    /* ............................................. */
-
-    main{
-        margin: 10%;
-    }
-    main h1{
-        font-size: 250%;
-        width: 100%;
-    }
-    main p{
+    .root{
         font-size: 70%;
-        width: 100%;
+    }
+    body{
+        font-size: 70%;
+        max-width:750px;
+    }
+    
+    img{ 
+        width: 50%;
     }
 
-    /* ............................................. */
 
     .proyect {
-        font-size: 0.7rem; 
+        font-size: 70%; 
         width: 70%;
-        flex-wrap: wrap;
-        flex-direction: column; 
-        align-items: center; 
-        text-align: center; 
     }
 
     .proyect video,
     .proyect img {
-        max-width: 90%; 
-        height: 90%; 
-        width: 100%;
-    }
+        max-width:750px;
+    } 
 
     /* ............................................. */  
     
-    .about{
-        font-size: 0.7rem; 
+     .about{
         width: 70%;
-        flex-wrap: wrap;
-        flex-direction: column; 
-        align-items: center; 
-        text-align: center; 
-        display:block;
     }
-    .about img{
-        min-width: 70%;
-    }
-
-    /* ............................................. */
-
-    .responsive {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-     }
-
-    /* ............................................. */
 
 
     .content {
-        font-size: 0.7rem; 
-        width: 80%;
+        width: 70%;
         margin:10%
     }
     
     .content h1 {
         font-size: 300%;
 
-    }
+    } */
 
     /* ............................................. */
 
-    .card-process {
-        max-width: 100%;
+    section{
+        width:750px;
         font-size: 50%;
     }
 
-    /* ............................................. */
-
-    .loup {
-        display: none;
+    section img{
+        width:50%;
     }
-
-    footer{
+     .card-process {
+        max-width:70%;
+        font-size: 50%;
         display: flex;
         flex-wrap: wrap;
-        font-size: 10%;
-        justify-content: center;
-        align-items: center;
-        width: 80%;
-        padding-top: 4rem;
-    }
-    footer h1{
-        font-size: 1500%;
+    } 
+
+    .card_definition {
+        max-width:70%;
+        font-size: 50%;
     }
     
 }
 
-@media (max-width: 500px) {
- 
-    h1{
-    font-size: 200%;
-    }
 
-    /* ............................................. */
-
-     nav a{
-        display: block
-    } 
-
-    a{
-        font-size: 80%;
-    } 
-
-    /* ............................................. */
-
-    main{
-        margin: 10%;
-    }
-    main h1{
-        font-size: 250%;
-        width: 100%;
-    }
-    main p{
+@media (max-width: 375px) {
+    .root{
         font-size: 70%;
-        width: 100%;
+    }
+    body{
+        font-size: 70%;
+        max-width:750px;
+    }
+    
+    img{ 
+        width: 50%;
     }
 
-    /* ............................................. */
 
     .proyect {
-        font-size: 0.5rem; 
-        width: 55%;
-        flex-wrap: wrap;
-        flex-direction: column; 
-        align-items: center; 
-        text-align: center; 
-
+        font-size: 70%; 
+        width: 70%;
     }
 
     .proyect video,
     .proyect img {
-        max-width: 90%; 
-        height: 90%; 
-        width: 100%;
-    }
+        max-width:750px;
+    } 
 
-    /* ............................................. */
-
-    .container {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .card {
-        height: 300px;
-        width: 300px; 
-    }
+    /* ............................................. */  
     
-    .card::before ,.image{
-        width: 350px;
-        object-fit: cover;
-     }
-
-    /* ............................................. */
-
-    .responsive {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    
-     }
-
-    /* ............................................. */
-
-    .about{
-        font-size: 0.7rem; 
-        width: 50%;
-        flex-wrap: wrap;
-        flex-direction: column; 
-        align-items: center; 
-        text-align: center; 
+     .about{
+        width: 70%;
     }
 
-    .about img{
-        min-width: 50%;
-    }
-
-    /* ............................................. */
 
     .content {
-        font-size: 0.5rem; 
-        width: 200px;
+        width: 70%;
         margin:10%
     }
     
     .content h1 {
         font-size: 300%;
 
-    }
-    
+    } */
+
     /* ............................................. */
 
-    .card-process {
-        display: flex;
-        flex-wrap: wrap;
+    section{
+        width:750px;
         font-size: 50%;
-        justify-content: center;
     }
 
-    /* ............................................. */   
-
-    .loup {
-        display: none;
+    section img{
+        width:50%;
     }
-
-    footer{
+     .card-process {
+        max-width:70%;
+        font-size: 50%;
         display: flex;
         flex-wrap: wrap;
-        font-size: 10%;
-        justify-content: center;
-        align-items: center;
-        width: 70%;
-    }
-    footer h1{
-        font-size: 1500%;
-    }
-
-}
-
-@media (max-width: 390px) {
-    
-    .body{
-        margin: 7rem;
-        font-size: 30%;
-    }
-
-    h1{
-        font-size: 200%;
-        }
-    
-    /* ............................................. */   
-
-    nav a{
-        display: block
     } 
 
-    a{
-        font-size: 70%;
-    }
-
-    /* ............................................. */   
- 
-    .main{
-        font-size: 10%;
-    }
-
-    /* ............................................. */   
-
-    .proyect {
-        font-size: 0.5rem;
-        width: 55%;
-        flex-wrap: wrap;
-        flex-direction: column; 
-        align-items: center; 
-        text-align: center; 
-
-    }
-
-    .proyect video,
-    .proyect img {
-        max-width: 100%; 
-        height: 100%; 
-        width: 100%;
-    }
-
-    /* ............................................. */
-
-    .responsive {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-     }
-
-    /* ............................................. */
-
-
-    .about{
-        font-size: 0.7rem; 
-        width: 50%;
-        flex-wrap: wrap;
-        flex-direction: column; 
-        align-items: center; 
-        text-align: center; 
-    }
-    .about img{
-        min-width: 100%;
-    }
-
-
-    /* ............................................. */   
-
-    .content {
-        font-size: 0.5rem; 
-        width: 200px;
-    }
-    
-    .content h1 {
-        font-size: 300%;
-
-    }
-
-    /* ............................................. */
-
-    .card-process {
-        max-width: 100%;
+    .card_definition {
+        max-width:70%;
         font-size: 50%;
-    }
-
-    /* ............................................. */   
-
-    .loup {
-        display: none;
-    }
-
-    footer{
-        display: flex;
-        flex-wrap: wrap;
-        font-size: 10%;
-        justify-content: center;
-        align-items: center;
-        width: 70%;
-    }
-    footer h1{
-        font-size: 1500%;
     }
     
 }
-
