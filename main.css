@@ -94,6 +94,7 @@ header {
     margin: 0;
     box-shadow: 8px 8px 10px #ddd, -8px -8px 10px #fff;
     border-radius: 0 0 1rem 1rem ;
+    
 
 }
 
@@ -111,6 +112,7 @@ nav {
     margin: 0;
     padding: 0;
     overflow: hidden;
+   
 }
 
 nav a {
@@ -126,7 +128,6 @@ nav a {
 nav a:hover:not(.active) { 
     color: black; 
     text-decoration: underline;
-    font-size: 1.7rem;
     cursor: url('images/cursor6.svg'), auto;
 }
  
@@ -657,13 +658,16 @@ margin-top: 2rem;
 
 .work {
     text-align: center; 
-    padding-top: 2rem;
+    margin: 4rem auto;
     max-width: 800px;
+    justify-content: center;
+    align-items: center;
 }
 
 .process {
-    width: 60%;
+    width: 80%;
     filter: brightness(99%); 
+    justify-content: center;
     
 }
 
