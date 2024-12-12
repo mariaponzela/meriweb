@@ -6,46 +6,57 @@
         <title>Meriweb</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="main.css">
+        <link type="stylesheet" href="https://unpkg.com/neomorphism" />
     </head>
 
     <body>
         <header>
             <nav>
-                <a href="index.html">UX/UI Projects</a>
-                <a href="Side.html">Side Projects</a>
+                <a href="index.html"><i class="fa-solid fa-house"></i></a>
+                <a href="Side.html">Projects</a>
+                <a href="About.html">About</a>
                 <a href="Gallery.html">My Gallery</a>
             </nav>
-            <button onclick="window.location='Chat.html'">Let's chat</button>
+            <button class="button" onclick="window.location='Chat.html'">Let's chat</button>
         </header>
 
-        <main>
+        <div class="welcome" style="margin-bottom: 24px;" >
+            <div class="title-left">
+                <h1>María Ponzela</h1>
+                <h3><em>Graphic, UX/UI designer</em></h3>
+                <!-- <p>Design is always looking for <strong>better</strong> solutions. <strong>I design to make those solutions a reality.</strong></p>       -->
+            </div>
+            <img class="welcome-img" src="images/yo1.JPG">
+        </div>
+        <a href="images/MariaPonzela_CV2024.pdf" download>
+            <button class="button_important"><span>check my CV </span></button> 
+        </a> 
+        
+        <!-- <main>
             <p><em>welcome to my world.</em></p>
-            <h1>My name is María Poncela</h1>
+            <h1>María Ponzela</h1>
             <p>Design is always looking for <strong>better</strong> solutions. <strong>I design to make those solutions a reality.</strong></p>
             <button onclick="window.location='About.html'">About me</button>
-        </main>
+        </main> -->
         
 
         <section class="proyect">
             <div>
-                <p><em>I design to make those solutions a reality.</em></p>
-                <h3>Coinhabit</h3>
+                <h2>Coinhabit</h2>
                 <p>This project sought to respond to the challenge of <strong>how we could improve the financial health of the communities that live in colivin</strong>. I set out to find an answer in <strong> 72 hours</strong>.</p>
                 <button onclick="window.location='Coinhabit.html'">know more</button>
             </div>
             <!-- <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/proto/X1qiUexBBU9hiqyT2tZWs3/Coinhabit?node-id=3-734&node-type=canvas&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=3%3A734&share=1&embed-host=share" allowfullscreen></iframe>            -->
-            <video class="video" autoplay muted loop>
+            <video class="video" autoplay muted loop  style=" max-width: 70%;">
                 <source src="images/coinhabit.mp4">
             </video>  
         </section>
         <section class="proyect">
-            <img src="images/BBVA.svg">
+            <img src="images/BBVA/Cover.png"  style="max-width: 500px;">
             <div>
-                <p><em>I design to make those solutions a reality.</em></p>
                 <h3>BBVA</h3>
                 <p>In my work with BBVA I was able (together with the Open Market, Experience and RCP teams) to participate in <strong>user research, conceptualization of new products, UX review and homogenization of screens</strong> for the different
-                        geographies. As well as I collaborated in the <strong>documentation and prototyping
-                        of the new visual language</strong> of the design system.</p>
+                        geographies. As well as I collaborated in the <strong>documentation and prototyping of the new visual language</strong> of the design system.</p>
                 <button onclick="window.location='bbva.html'">know more</button>
             </div>
         </section>
@@ -101,30 +112,13 @@
                     <p>Test and refine the proposed solutions through feedback and iteration.</p>
                 </div>
             </div>
-            <!-- <div class="card1">
-                <h2>Discover</h2>
-                <p>Generate creative ideas and solutions through brainstorming.</p>
-            </div>
-            <div class="card1">
-                <h2>Define</h2>
-                <p>Analyze the gathered information to clearly frame the problem, establishing a focus.</p>
-            </div>
-            <div class="card1">
-                <h2>Develope</h2>
-                <p>Generate creative ideas and solutions through brainstorming.</p>
-            </div>
-            <div class="card1">
-                <h2>Deliver</h2>
-                <p>Explain in more detail its method of use and its meaning. Show a first rendering of the product.</p>
-            </div>
-            <div class="card1">
-                <h2>Evolve</h2>
-                <p>Test and refine the proposed solutions through feedback and iteration.</p>
-            </div> -->
         </div>
+        
         <img class="loup" src="images/Footer.gif"></img>
+
+
         <footer>
-            <h1>You can also find me in...</br></h1>
+            <h2>You can also find me in...</br></h2>
             <div class="RRSS">
                 <button onclick="window.location='https://www.linkedin.com/in/mariaponzela/'"><i class="fab fa-linkedin-in"></i></button>
                 <button onclick="window.location='https://www.linkedin.com/in/mariaponzela/'"><i class="fab fa-behance"></i></button>
